@@ -25,3 +25,9 @@ Route::get('/movies', function () {
 Route::get('/series', function () {
     return view('pages.series');
 });
+Route::get('/series/content/1', function () {
+    return view('pages.content_series');
+});
+Route::get('/movies/content/1', function () {
+    return view('pages.content_movie');
+});

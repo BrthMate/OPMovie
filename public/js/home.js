@@ -15,8 +15,8 @@ $(document).ready(() => {
         dots: false,
         loop: true,
         margin: 15,
-        /*autoplay: true,
-        autoplayHoverPause: true,*/
+        autoplay: true,
+        autoplayHoverPause: true,
         responsive: {
             0: {
                 items:1
@@ -37,8 +37,8 @@ $(document).ready(() => {
         items: 2,
         loop: true,
         margin: 15,
-        /*autoplay: true,
-        autoplayHoverPause: true,*/
+        autoplay: true,
+        autoplayHoverPause: true,
         margin: 15,
         responsive: {
             0: {

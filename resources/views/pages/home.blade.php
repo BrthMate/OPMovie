@@ -2,6 +2,7 @@
 
 @section("css")
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/app.css">
 @endsection
 
 @section("content")
@@ -489,5 +490,6 @@
     @endsection
 
 @section("script")
+    <script src="js/app.js"></script>
     <script src="js/home.js"></script>
 @endsection

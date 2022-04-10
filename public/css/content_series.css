@@ -1,0 +1,109 @@
+.container{
+    margin-top: 100px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.card{
+    overflow: hidden;
+    padding: 0;
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    background: unset;
+}
+.card img{
+    border-radius: 25px;
+}
+.card:hover img{
+    transform: scale(1.6);
+}
+.card-body{
+    height: 64px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.row .card:hover{
+    color: var(--light);
+}
+.card-title{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    left: 0;
+}
+.over__lay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    background: var(--darkOpocity);
+    display: none;
+}
+.card:hover .over__lay{
+    display: block;
+}
+.details{
+    width: 15rem;
+}
+.series__desc{
+    width: calc( 100% - 15rem);
+    padding: 10px;
+}
+.title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.detail{
+    display: flex;
+    margin: 1rem 0;
+    flex-direction: column;
+}
+.detail div{
+    font-family: var(--font-family-raleway);
+}
+.episode__list{
+    margin: 120px 5px 25px 5px;
+    width: 100%;
+}
+.link__to{
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: var(--blue);
+    font-size: 1.3rem;
+    margin: 3px;
+    color: white;
+    font-family: var(--font-family-lato);
+}
+.link__to:hover{
+    color: var(--blue);
+    background: white;
+}
+video{
+    width: 100%;
+}
+.button{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+}
+.movie__item{
+    padding-top: 170%;
+}
+@media screen and (max-width: 600px) {
+    .row{
+        flex-direction: column;
+    }
+    .details{
+        margin: auto;
+    }
+    .series__desc{
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+    }
+}

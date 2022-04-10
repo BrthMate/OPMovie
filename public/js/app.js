@@ -16,7 +16,7 @@ if( url == "/"){
     pageTag.children[0].classList.add("active");
 }else if ( url == "/series"){
     pageTag.children[1].classList.add("active");
-}else{
+}else if ( url == "/movies"){
     pageTag.children[2].classList.add("active");
 }
 
@@ -42,7 +42,10 @@ document.addEventListener('click', function(e) {
         if(e.target.id == "search__btn" || e.target.id == "search__box__icon" || e.target.id == "search" || e.target.id == "show__search__field")
         {}
         else
-        {searchItemsDN();}
+        {
+            searchItemsDN();
+            searchBox.style.display = "none";
+        }
     }  
 }, false);
 
@@ -131,9 +134,8 @@ document.addEventListener('scroll', function(e) {
     }
     backToUp = window.scrollY;  
 });
-
 searchInput.addEventListener('keyup', () => {
-    if(url == "/"){
+    if(url != "/movies" || url != "/series" ){
         let search = searchInput.value;
         if(search != ""){
             searchBox.style.display = "flex";
@@ -144,3 +146,52 @@ searchInput.addEventListener('keyup', () => {
         //masik oldal
     }
 });
+
+/***back__to */
+
+BackTop.addEventListener("mousedown", BackTopmousedown);
+
+function BackTopmousedown(e){
+
+    window.addEventListener('mousemove',mousemove);
+    window.addEventListener('mouseup',mouseup);
+
+    let prevX = e.clientX;
+    let prevY = e.clientY;
+
+    function mousemove(e){
+
+        BackTop.style.right= "unset";
+
+        let newX = prevX-e.clientX;
+        let newY = prevY-e.clientY;
+
+        const rect = BackTop.getBoundingClientRect();
+        if(window.innerWidth-(rect.left - newX)-BackTop.offsetWidth < 10 ){
+            BackTop.style.left = window.innerWidth-BackTop.offsetWidth - 10 + "px";          
+        }
+        else if (window.innerHeight-(rect.top - newY)-BackTop.offsetHeight < 10) {
+            BackTop.style.top = window.innerHeight-BackTop.offsetHeight - 10 + "px"; 
+        }
+        else{
+            if(rect.top - newY > 10){
+                BackTop.style.top = rect.top - newY + "px";
+            }else{
+                BackTop.style.top = 10 + "px";
+            }
+            if(rect.left - newX > 10){
+                BackTop.style.left = rect.left - newX + "px";
+            }else{
+                BackTop.style.left = 10 + "px";
+            }
+        }
+        prevX = e.clientX;
+        prevY = e.clientY;
+    
+    }
+
+    function mouseup(){
+        window.removeEventListener('mousemove',mousemove);
+        window.removeEventListener('mouseup', mouseup);
+    }
+}
