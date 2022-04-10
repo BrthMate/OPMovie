@@ -8,8 +8,28 @@
 @section("content")
 @endsection
     <div class="container">
-        <div class="filter">
+        <div class="filter container__dropdown">               
+            <div class="dropdown">
+                <div class="select">
+                <span>Select Gender</span>
+                </div>
+                <input type="hidden" name="gender">
+                <ul class="dropdown-menu">
+                <li id="male">Male</li>
+                <li id="female">Female</li>
+                </ul>
+            </div>
 
+            <div class="dropdown">
+                <div class="select">
+                <span>Select Gender</span>
+                </div>
+                <input type="hidden" name="gender">
+                <ul class="dropdown-menu">
+                <li id="male">Male</li>
+                <li id="female">Female</li>
+                </ul>
+            </div>
         </div>
         <div class="row">
             <div class="card" style="width: 13rem;">

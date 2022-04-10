@@ -5,6 +5,8 @@ const searchContainer = document.querySelector(".search__container");
 const pageTag = document.querySelector(".to__pages");
 const mode = document.querySelector(".mode");
 const BackTop = document.querySelector(".back__top");
+const searchInput = document.getElementById("search");
+const searchBox = document.querySelector(".find__item__container");
 
 let DarkMode = localStorage.getItem("darkMode");
 let searchActive = false;
@@ -70,11 +72,9 @@ mode.addEventListener("click",()=>{
     DarkMode = localStorage.getItem("darkMode")
     if(DarkMode != "enabled"){
         enableDarkMode();
-        console.log("oke")
         darkModel();
     }else{
         disenableDarkMode();
-        console.log("ez is")
         lightModel();
     }
 });
@@ -119,7 +119,6 @@ document.addEventListener('scroll', function(e) {
 let backToUp = 0;
 
 document.addEventListener('scroll', function(e) {
-    console.log(window.scrollY)
     if(window.scrollY < backToUp){
         BackTop.style.display = "block";
         BackTop.style.top = height*0.7+scrollY+"px";
@@ -131,4 +130,17 @@ document.addEventListener('scroll', function(e) {
         BackTop.style.display = "none";
     }
     backToUp = window.scrollY;  
+});
+
+searchInput.addEventListener('keyup', () => {
+    if(url == "/"){
+        let search = searchInput.value;
+        if(search != ""){
+            searchBox.style.display = "flex";
+        }else{
+            searchBox.style.display = "none";
+        }
+    }else{
+        //masik oldal
+    }
 });

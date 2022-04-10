@@ -92,6 +92,7 @@ li.active a{
 .cog__icon:hover{
     background: var(--blue);
     border-radius: 5px;
+    color: white;
 }
 .cog__items{
     width: max-content;
@@ -110,6 +111,7 @@ li.active a{
 
 .cog__items:hover{
     background: var(--blue);
+    color: white;
 }
 
 .btn{
@@ -168,10 +170,11 @@ h2{
     position: absolute;
     right: 20%;
     z-index: 999;
-    padding: 10px;
+    padding: 7.5px 10px;
     background: var(--blue);
     border-radius: 20px;
     display: none;
+    color: white;
 }
 .back__top i{
     font-size: 1.5rem;
@@ -180,6 +183,18 @@ h2{
 .back__top:hover{
     color: unset;
     background: var(--dark);
+}
+.find__item__container{
+    position: absolute;
+    top: 70px;
+    background: var(--dark);
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    left: 65px;
+    right: 80px;
+    display: none;
 }
 @media screen and (max-width: 450px) {
     .navigation{

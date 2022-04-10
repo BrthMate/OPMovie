@@ -42,6 +42,12 @@
             <div name="searchBtn" class="search__icon" id="search__btn">
                 <box-icon color="var(--light)" id="search__box__icon"name='search'></box-icon>
             </div>
+            <div class="find__item__container">
+              <a href="#" class="find__item">alma</a>
+              <a href="#" class="find__item">alma</a>
+              <a href="#" class="find__item">alma</a>
+              <a href="#" class="find__item">alma</a>
+            </div>
         </div>
     </div>
     
