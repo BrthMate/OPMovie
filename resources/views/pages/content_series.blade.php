@@ -168,9 +168,71 @@
             <a href="#" class="link__to">3</a>
         </div>
         <div class="video">
-            <video controls autoplay>
-                <source src="../../video/Maul.mp4" type="video/mp4">
-            </video>
+            
+            <div class="video-container">
+                <video>
+                    <source src="../../video/Maul.mp4" type="video/mp4">
+                </video>
+                <div class="controller">
+                    <div class="timeline">
+                        
+                    </div>
+                    <div class="progress__bar">
+                        <div class="watched__bar"></div>
+                        <div class="playhead"></div>
+                    </div>
+                    <div class="left">
+                        <button class="play__btn">
+                            <i class='bx bx-play'></i>
+                        </button>
+                        <button class="stop__btn">
+                            <i class='bx bx-pause'></i>
+                        </button>
+                        <button class="voice__btn">
+                            <i class='bx bx-volume-full' ></i>
+                            <i class='bx bx-volume-low' ></i>
+                            <i class='bx bx-volume' ></i>
+                            <i class='bx bx-volume' ></i>
+                        </button>
+                        <button class="previous__btn">
+                            <i class='bx bx-skip-previous' ></i>
+                        </button>
+                        <button class="next__btn">
+                            <i class='bx bx-skip-next'></i>
+                        </button>          
+                    </div>
+                    <div class="middle">
+                        <div class="video__title">
+                            Lorem imsun hossz szöveg
+                        </div>
+                    </div>
+                    <div class="right">
+                    
+                        <button class="cc__btn">
+                            <i class='bx bx-captions' ></i>
+                        </button>
+                        <div class="cog__container">
+                            <button class="cog__btn">
+                                <i class='bx bx-cog' ></i>
+                            </button>
+                            <div class="cox__box">
+                                <div class="sub__title">
+                                    <i class='bx  bx-captions'></i><span>sub</span>
+                                </div>
+                                <div class="speed">
+                                    <i class='bx bx-fast-forward-circle'></i><span>speed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="exit__fullscreen__btn">
+                            <i class='bx bx-exit-fullscreen' ></i>
+                        </button>
+                        <button class="fullscreen__btn">
+                            <i class='bx bx-fullscreen' ></i>
+                        </button>
+                    </div> 
+                </div>
+            </div>
 
             <div class="button">
             <button class="btn btn-primary">
