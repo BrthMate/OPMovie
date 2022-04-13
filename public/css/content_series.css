@@ -169,18 +169,19 @@ video{
 .video__title{
     color: white;
 }
-.cog__container,.voice__container{
+.cog__container,.voice__container,.cc__container{
     position: relative;
 }
-.cox__box{
+.cox__box,.cc__box{
     position: absolute;
-    top: -80px;
-    font-size: 1.1rem;
+    bottom: 60px;
+    font-size: 1.2rem;
     background: var(--blue);
-    padding: 5px 10px;
+    padding: 0px 15px;
     border-radius: 10px;
     color: white;
     display: none;
+    right: 3px;
     flex-direction: column;
 }
 .form-range{
@@ -201,12 +202,68 @@ video{
 .speed,.sub__title{
     display: flex;
     align-items: center;
+    padding: 5px;
     justify-content: flex-start;
 }
 .cog__container span{ 
     margin: 0 3px;
 }
-/**/
+.sub__title__lang{
+    display: flex;
+    flex-direction: column;
+}
+.sub__title__lang span{
+    padding-right: 5px;
+}
+.sub__title__lang .active{
+    border-bottom: 2px solid white;
+}
+.cc__btn.active{
+    background-color: var(--blue);
+}
+video::cue {
+    color: var(--color);
+    font-size: var(--fontsize);
+    background: var(--background);
+
+}
+.settings{
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    padding: 10px;
+    background: var(--dark);
+    border-radius: 10px;
+}
+.settings div {
+    display: flex;
+    margin: 10px;
+    align-content: space-between;
+    align-items: flex-end;
+}
+.settings input{
+    background: unset;
+    border: unset;
+    color: var(--light);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    height: 30px;
+}
+#fontSize{
+    border-bottom: 2px solid var(--blue);
+}
+.settings label {
+    padding-right: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
 @media screen and (max-width: 600px) {
     .row{
         flex-direction: column;
@@ -227,5 +284,9 @@ video{
     .controller button i {
         font-size: 5vw;
         padding: 0 3px;
+    }
+    .form-range{
+        height: unset;
+        left:  5vw;
     }
 }

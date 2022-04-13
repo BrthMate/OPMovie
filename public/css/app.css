@@ -13,6 +13,10 @@ html{
     --blue: rgb(15, 80, 219);
     --font-family-lato: 'Lato', sans-serif;
     --font-family-raleway: 'Raleway', sans-serif;
+
+    --color: white;
+    --background: black;
+    --fontsize: 1rem;
 }
 *{
     margin: 0;

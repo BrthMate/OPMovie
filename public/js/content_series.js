@@ -17,22 +17,61 @@ const bar = document.querySelector(".progress__bar");
 const Cogbox = document.querySelector(".cox__box");
 const voiceContainer = document.querySelector(".voice__container");
 const VoiceRange = document.querySelector(".voice__container input");
-
-let activeCogbox = false;
+const ccBox = document.querySelector(".cc__box");
+const subContainer = document.querySelector(".sub__title__lang");
+const subTitle = document.querySelector(".sub__title");
+const subSettingsbox = document.querySelector(".settings");
+const save = document.querySelector("#save");
+const cancel = document.querySelector("#cancel");
 
 let controlsTimeout;
+let Currentsub;
+
 watchedBar.style.width = '0px';
 pauseBtn.style.display = 'none';
 exitBtn.style.display = 'none';
 TimeLine.style.display = "none";
 voiceBtn.children[1].style.display = "none";
 voiceBtn.children[2].style.display = "none";
+subSettingsbox.style.display = "none";
 
+
+for (var i = 0; i < video.textTracks.length; i++) {
+  var curTrack = video.textTracks[i];
+  var addTrackOpt = document.createElement('span');
+  //addTrackOpt.setAttribute('value',curTrack.kind + '-' + curTrack.language);
+  addTrackOpt.textContent = curTrack.label;
+  subContainer.appendChild(addTrackOpt);
+}
+
+const subContainerElement = document.querySelectorAll(".sub__title__lang span");
+
+subTitle.addEventListener("click", () => {
+  subTitleSettings();
+});
+save.addEventListener("click", () => {
+  saveSettings();
+});
+cancel.addEventListener("click", () => {
+  cancelSettings();
+});
 document.addEventListener('click', function handleContainer(e){
     if(e.target.className == "form-range" || e.target.className =="bx bx-volume-full" || e.target.className =="bx bx-volume-low" || e.target.className =="bx bx-volume" ){   
       VoiceRange.style.display = "flex";
+      Cogbox.style.display = "none";
+      ccBox.style.display = "none";
+    }else if(e.target.className == "bx bx-cog"){
+      Cogbox.style.display = "flex";
+      VoiceRange.style.display = "none";
+      ccBox.style.display = "none";
+    }else if(e.target.className == "bx bx-captions"){
+      ccBox.style.display = "flex";
+      VoiceRange.style.display = "none";
+      Cogbox.style.display = "none";
     }else{
       VoiceRange.style.display = "none";
+      Cogbox.style.display = "none";
+      ccBox.style.display = "none";
     }
 });
 document.addEventListener('mousemove', () => {
@@ -46,6 +85,16 @@ VoiceRange.addEventListener("keyup", () => {
 });
 VoiceRange.addEventListener("mousemove", () => {
   volumeControl();
+});
+VoiceRange.addEventListener("mousewheel", (e) => {
+  if(exitBtn.style.display != 'none'){
+    if(e.deltaY > 0){
+      VoiceRange.value = VoiceRange.value+0.1;
+    }else{
+      VoiceRange.value = VoiceRange.value-0.1;
+    }
+  }
+  //0.5 fölé nem megy és leugrik 1-0.5 re
 });
 playBtn.addEventListener('click', () => {
   playPause();
@@ -149,13 +198,16 @@ bar.addEventListener('click', (event) => {
   const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft)) / bar.offsetWidth;
   video.currentTime = pos * video.duration;
 });
-cogBtn.addEventListener("click", () => {
+/*cogBtn.addEventListener("click", () => {
   cogBoxDP();
-})
+})*/
 const displayControls = () => {
     controller.classList.add("active");
     document.body.style.cursor = 'initial';
     TimeLine.style.display = "";
+    if(Currentsub != undefined){
+      cuesSettings(Currentsub,-5);
+    }
     if (controlsTimeout) {
       clearTimeout(controlsTimeout);
     }
@@ -163,6 +215,9 @@ const displayControls = () => {
         controller.classList.remove("active");
         document.body.style.cursor = 'none';
         TimeLine.style.display = "none";
+        if(Currentsub != undefined){
+          cuesSettings(Currentsub);
+        }
     }, 3000);
 };
 
@@ -213,7 +268,7 @@ const mouse_position = () => {
   }
 }
 
-const cogBoxDP = () => {
+/*const cogBoxDP = () => {
   if(!activeCogbox){
     Cogbox.style.display = "flex";
     activeCogbox = true;
@@ -221,7 +276,7 @@ const cogBoxDP = () => {
     Cogbox.style.display = "none";
     activeCogbox = false;
   }
-}
+}*/
 
 const  volumeControl = () =>{
   if("0.6"<=VoiceRange.value && VoiceRange.value<="1"){
@@ -240,4 +295,69 @@ const  volumeControl = () =>{
     voiceBtn.children[2].style.display = "";
   }
   video.volume = VoiceRange.value;
+}
+
+subContainerElement.forEach(element => {
+  element.addEventListener("click", () =>{
+    trackChange(element.innerHTML)
+  });
+});
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function trackChange(value) {
+  if(value === 'off') {
+    for (var i = 0; i < video.textTracks.length; i++) {
+      video.textTracks[i].mode = 'hidden';
+    }
+    ccBtn.classList.remove("active");
+  }else {
+    for (var i = 0; i < video.textTracks.length; i++) {
+      video.textTracks[i].mode = 'hidden';
+      if(video.textTracks[i].label == value) {
+        Currentsub = i;
+        video.textTracks[i].mode = 'showing';
+        await sleep(1000);
+        cuesSettings( Currentsub)
+      }
+    }
+  }
+
+  subContainerElement.forEach(element => {
+    if(element.innerHTML == value){
+      element.classList.add("active");
+    }else{
+      element.classList.remove("active");
+  }
+  });
+}
+
+function cuesSettings(element,line){
+  if(line == undefined){
+    line = -2;
+  }
+  video.textTracks[element].mode = 'hidden';
+  let length = video.textTracks[element].cues.length;
+  for (var i = 0; i < length ; i++) {
+    video.textTracks[element].cues[i].line = line;
+  }
+  video.textTracks[element].mode = 'showing';
+}
+function subTitleSettings(){
+  if(subSettingsbox.style.display == "none"){
+    subSettingsbox.style.display = "block";
+  }else{
+    subSettingsbox.style.display = "none";
+  }
+}
+
+function saveSettings(){
+  $(':root').css('--color',document.querySelector("#fontColor").value);
+  $(':root').css('--fontsize',document.querySelector("#fontSize").value +"px");
+  $(':root').css('--background',document.querySelector("#bgColor").value);
+  subSettingsbox.style.display = "none";
+}
+function cancelSettings(){
+  subSettingsbox.style.display = "none";
 }

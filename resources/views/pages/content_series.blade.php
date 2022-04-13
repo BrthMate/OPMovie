@@ -171,7 +171,29 @@
             <div class="video-container">
                 <video id="video">
                     <source src="../../video/Maul.mp4" type="video/mp4">
+                    <track label="English" kind="subtitles" srclang="en" src="../../subs/en.vtt" >
+                    <track label="Deutsch" kind="subtitles" srclang="de" src="../../subs/de.vtt" >
+                    <track label="Español" kind="subtitles" srclang="es" src="../../subs/es.vtt" >
                 </video>
+                <div class="settings">
+                    <div>
+                        <label for="bgColor">Background color</label>
+                        <input type="color" id="bgColor">
+                    </div>
+                    <div>
+                        <label for="fontColor">Font color</label>
+                        <input type="color" id="fontColor">
+                    </div>
+                    <div>   
+                        <label for="fontSize">Font size</label>
+                        <input type="number" id="fontSize" min = "0" max = "30">
+                    </div>
+                    <button id="save" class="btn btn-primary">Save</button>
+                    <button id="cancel" class="btn btn-primary">Cancel</button>
+               
+               
+
+                </div>
                 <div class="controller">
                     <div class="timeline">
                     </div>
@@ -207,9 +229,16 @@
                         </div>
                     </div>
                     <div class="right">
-                        <button class="cc__btn">
-                            <i class='bx bx-captions' ></i>
-                        </button>
+                        <div class="cc__container">
+                            <button class="cc__btn">
+                                <i class='bx bx-captions' ></i>
+                            </button>
+                            <div class="cc__box">
+                                <div class="sub__title__lang">
+                                    <span class ="active">off</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="cog__container">
                             <button class="cog__btn">
                                 <i class='bx bx-cog' ></i>
