@@ -26,6 +26,7 @@ const cancel = document.querySelector("#cancel");
 
 let controlsTimeout;
 let Currentsub;
+let lineControll = -4;
 
 watchedBar.style.width = '0px';
 pauseBtn.style.display = 'none';
@@ -206,7 +207,7 @@ const displayControls = () => {
     document.body.style.cursor = 'initial';
     TimeLine.style.display = "";
     if(Currentsub != undefined){
-      cuesSettings(Currentsub,-5);
+      cuesSettings(Currentsub,lineControll);
     }
     if (controlsTimeout) {
       clearTimeout(controlsTimeout);
@@ -310,6 +311,7 @@ async function trackChange(value) {
   if(value === 'off') {
     for (var i = 0; i < video.textTracks.length; i++) {
       video.textTracks[i].mode = 'hidden';
+      Currentsub = undefined;
     }
     ccBtn.classList.remove("active");
   }else {
