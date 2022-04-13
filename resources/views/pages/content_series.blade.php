@@ -168,14 +168,12 @@
             <a href="#" class="link__to">3</a>
         </div>
         <div class="video">
-            
             <div class="video-container">
-                <video>
+                <video id="video">
                     <source src="../../video/Maul.mp4" type="video/mp4">
                 </video>
                 <div class="controller">
                     <div class="timeline">
-                        
                     </div>
                     <div class="progress__bar">
                         <div class="watched__bar"></div>
@@ -188,12 +186,14 @@
                         <button class="stop__btn">
                             <i class='bx bx-pause'></i>
                         </button>
-                        <button class="voice__btn">
-                            <i class='bx bx-volume-full' ></i>
-                            <i class='bx bx-volume-low' ></i>
-                            <i class='bx bx-volume' ></i>
-                            <i class='bx bx-volume' ></i>
-                        </button>
+                        <div class="voice__container">
+                            <button class="voice__btn">
+                                <i class='bx bx-volume-full' ></i>
+                                <i class='bx bx-volume-low' ></i>
+                                <i class='bx bx-volume' ></i>
+                            </button>
+                            <input type="range" class="form-range" value="1" min=0 max=1 step="0.1" id="customRange1">
+                        </div>
                         <button class="previous__btn">
                             <i class='bx bx-skip-previous' ></i>
                         </button>
@@ -207,7 +207,6 @@
                         </div>
                     </div>
                     <div class="right">
-                    
                         <button class="cc__btn">
                             <i class='bx bx-captions' ></i>
                         </button>

@@ -9,13 +9,14 @@ const exitBtn = document.querySelector(".exit__fullscreen__btn");
 const fullBtn = document.querySelector(".fullscreen__btn");
 
 const videoContainer = document.querySelector(".video-container");
-const video = document.querySelector('.video-container video');
+const video = document.querySelector('.video-container #video');
 const watchedBar = document.querySelector(".watched__bar");
 const controller = document.querySelector(".controller");
 const TimeLine = document.querySelector(".timeline");
 const bar = document.querySelector(".progress__bar");
-
 const Cogbox = document.querySelector(".cox__box");
+const voiceContainer = document.querySelector(".voice__container");
+const VoiceRange = document.querySelector(".voice__container input");
 
 let activeCogbox = false;
 
@@ -26,34 +27,58 @@ exitBtn.style.display = 'none';
 TimeLine.style.display = "none";
 voiceBtn.children[1].style.display = "none";
 voiceBtn.children[2].style.display = "none";
-voiceBtn.children[3].style.display = "none";
 
+document.addEventListener('click', function handleContainer(e){
+    if(e.target.className == "form-range" || e.target.className =="bx bx-volume-full" || e.target.className =="bx bx-volume-low" || e.target.className =="bx bx-volume" ){   
+      VoiceRange.style.display = "flex";
+    }else{
+      VoiceRange.style.display = "none";
+    }
+});
 document.addEventListener('mousemove', () => {
     displayControls();
 });
+VoiceRange.addEventListener("click", () => {
+  volumeControl();
+});
+VoiceRange.addEventListener("keyup", () => {
+  volumeControl();
+});
+VoiceRange.addEventListener("mousemove", () => {
+  volumeControl();
+});
 playBtn.addEventListener('click', () => {
-  playPause()
+  playPause();
 });
 pauseBtn.addEventListener('click', () => {
-  playPause()
+  playPause();
 });
-voiceBtn.children[0].addEventListener('click', () => {
-  toggleMute()
+voiceBtn.children[0].addEventListener('dblclick', () => {
+  toggleMute();
 });
-voiceBtn.children[3].addEventListener('click', () => {
-  toggleMute()
+voiceBtn.children[2].addEventListener('dblclick', () => {
+  toggleMute();
 });
 fullBtn.addEventListener('click',() => {
-  toggleFullScreen()
+  toggleFullScreen();
 });
 exitBtn.addEventListener('click',() => {
-  toggleFullScreen()
+  toggleFullScreen();
 });
 video.addEventListener('click', () => {
-  playPause()
+  playPause();
 });
-video.addEventListener('dblclick',  () => { 
-  mouse_position()
+video.addEventListener('contextmenu',  () => { 
+  mouse_position();
+});
+video.addEventListener('mousewheel',  (e) => { 
+  if(exitBtn.style.display != 'none'){
+    if(e.deltaY > 0){
+      video.currentTime += 10.
+    }else{
+      video.currentTime -= 10.0
+    }
+  }
 });
 document.addEventListener('fullscreenchange', () => {
   if (!document.fullscreenElement) {
@@ -85,9 +110,8 @@ video.addEventListener('timeupdate', () => {
   watchedBar.style.width = ((video.currentTime / video.duration) * 100) + '%';
   if(watchedBar.offsetWidth < TimeLine.offsetWidth/2){
     TimeLine.style.left = '0%';
-  /*}else if(watchedBar.offsetWidth + TimeLine.offsetWidth/2 > bar.offsetWidth){
-    TimeLine.style.left = watchedBar.offsetWidth - TimeLine.offsetWidth + 'px';
-  */
+  }else if(watchedBar.offsetWidth + TimeLine.offsetWidth/2 > bar.offsetWidth){
+    TimeLine.style.left = "calc( 100% - 75px)";
   }else{
     TimeLine.style.left = watchedBar.offsetWidth - TimeLine.offsetWidth/2 + 'px';
   }
@@ -157,11 +181,13 @@ const playPause = () => {
 const toggleMute = () => {
   video.muted = !video.muted;
   if (video.muted) {
+    VoiceRange.value = 0;
     voiceBtn.children[0].style.display = 'none';
-    voiceBtn.children[3].style.display = '';
+    voiceBtn.children[2].style.display = '';
   } else {
     voiceBtn.children[0].style.display = '';
-    voiceBtn.children[3].style.display = 'none';
+    voiceBtn.children[2].style.display = 'none';
+    VoiceRange.value = 1;
   }
 };
 
@@ -197,3 +223,21 @@ const cogBoxDP = () => {
   }
 }
 
+const  volumeControl = () =>{
+  if("0.6"<=VoiceRange.value && VoiceRange.value<="1"){
+    voiceBtn.children[0].style.display = "";
+    voiceBtn.children[1].style.display = "none";
+    voiceBtn.children[2].style.display = "none";
+    video.muted = false;
+  }else if ("0.1"<=VoiceRange.value && VoiceRange.value<="0.5"){
+    voiceBtn.children[0].style.display = "none";
+    voiceBtn.children[1].style.display = "";
+    voiceBtn.children[2].style.display = "none";
+    video.muted = false;
+  }else{
+    voiceBtn.children[0].style.display = "none";
+    voiceBtn.children[1].style.display = "none";
+    voiceBtn.children[2].style.display = "";
+  }
+  video.volume = VoiceRange.value;
+}

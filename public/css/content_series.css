@@ -103,6 +103,7 @@ video{
     position: relative;
     overflow: hidden;
     background-color: black;
+    display: flex;
 }
 .controller{
     position: absolute;
@@ -139,7 +140,7 @@ video{
 .middle{
     margin: auto;
 }
-.right{
+.right,.left{
     display: flex;
 }
 .controller button{
@@ -168,18 +169,34 @@ video{
 .video__title{
     color: white;
 }
-.cog__container{
+.cog__container,.voice__container{
     position: relative;
 }
 .cox__box{
     position: absolute;
     top: -80px;
+    font-size: 1.1rem;
     background: var(--blue);
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     color: white;
     display: none;
     flex-direction: column;
+}
+.form-range{
+    transform: rotate(270deg);
+    width: 90px;
+    position: absolute;
+    top: -60px;
+    font-size: 1.1rem;
+    background: var(--blue);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    flex-direction: column;
+    left: -22.5px;
+    height: 35.61px;
+    display: none;
 }
 .speed,.sub__title{
     display: flex;
