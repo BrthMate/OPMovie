@@ -23,10 +23,20 @@ const subTitle = document.querySelector(".sub__title");
 const subSettingsbox = document.querySelector(".settings");
 const save = document.querySelector("#save");
 const cancel = document.querySelector("#cancel");
+const title = document.querySelector(".video__title");
+const timeContainer =document.querySelector(".time__container");
 
+let lastTimevalue;
+let lastTime = false;
 let controlsTimeout;
 let Currentsub;
 let lineControll = -5;
+
+if(!localStorage.getItem(title.innerHTML)){
+  localStorage.setItem(title.innerHTML, '');
+}else{
+  lastTimevalue = localStorage.getItem(title.innerHTML)
+}
 
 watchedBar.style.width = '0px';
 pauseBtn.style.display = 'none';
@@ -35,6 +45,7 @@ TimeLine.style.display = "none";
 voiceBtn.children[1].style.display = "none";
 voiceBtn.children[2].style.display = "none";
 subSettingsbox.style.display = "none";
+timeContainer.style.display = "none";
 
 
 for (var i = 0; i < video.textTracks.length; i++) {
@@ -165,6 +176,7 @@ video.addEventListener('timeupdate', () => {
   }else{
     TimeLine.style.left = watchedBar.offsetWidth - TimeLine.offsetWidth/2 + 'px';
   }
+  localStorage.setItem(title.innerHTML, video.currentTime)
   /*
   const totalSecondsRemaining = video.duration - video.currentTime;
 
@@ -224,6 +236,9 @@ const displayControls = () => {
 };
 
 const playPause = () => {
+  if(!lastTime && localStorage.getItem(title.innerHTML) != ""){
+    VideoContinues();
+  }
     if (video.paused) {
       video.play();
       playBtn.style.display = 'none';
@@ -364,3 +379,31 @@ function saveSettings(){
 function cancelSettings(){
   subSettingsbox.style.display = "none";
 }
+
+const VideoContinues = () =>{
+  lastTime = true;
+  timeContainer.style.display = "block";
+  document.querySelector(".time").innerHTML ="Kivánja folytatni? (" + formatTime(lastTimevalue) +")";
+  document.querySelector("#VideoContinues").addEventListener("click",() =>{
+    video.currentTime = lastTimevalue;
+    timeContainer.style.display = "none";
+  });
+  document.querySelector("#videoCancel").addEventListener("click",() =>{
+    timeContainer.style.display = "none";
+  });
+}
+
+const formatTime = (time) =>{
+  const currentTime = new Date(null);
+  currentTime.setSeconds(time);
+  let currentTimehours = null;
+
+  if(time >= 3600) {
+    currentTimehours = (currentTime.getHours().toString()).padStart('2', '0');
+  }
+
+  let currentTimeminutes = (currentTime.getMinutes().toString()).padStart('2', '0');
+  let currentTimeseconds = (currentTime.getSeconds().toString()).padStart('2', '0');
+
+  return (`${currentTimehours ? currentTimehours : '00'}:${currentTimeminutes}:${currentTimeseconds}`);
+} 

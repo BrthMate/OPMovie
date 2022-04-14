@@ -78,10 +78,11 @@
     margin: 3px;
     color: white;
     font-family: var(--font-family-lato);
+    border: 1px solid var(--blue);
 }
 .link__to:hover{
     color: var(--blue);
-    background: white;
+    background: var(--dark);;
 }
 video{
     width: 100%;
@@ -96,6 +97,7 @@ video{
 }
 .movie__item:hover img {
     transform: scale(1.6) translateY(30px);
+    height: 100%;
 }
 
 /**vidoe player*/
@@ -227,7 +229,7 @@ video::cue {
     background: var(--background);
 
 }
-.settings{
+.settings,.time__container{
     position: absolute;
     top: calc(50% - 100px);
     left: calc(50% - 100px);
@@ -261,8 +263,19 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.btn:hover{
+    background-color: var(--dark);
+    color: var(--blue);
+}
 input[type=number] {
   -moz-appearance: textfield;
+}
+.time__container{
+    max-width: 200px;
+    max-height: 200px;
+}
+.time{
+    margin: 10px;
 }
 @media screen and (max-width: 600px) {
     .row{
@@ -287,6 +300,5 @@ input[type=number] {
     }
     .form-range{
         height: unset;
-        left:  5vw;
     }
 }

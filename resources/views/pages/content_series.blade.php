@@ -190,9 +190,13 @@
                     </div>
                     <button id="save" class="btn btn-primary">Save</button>
                     <button id="cancel" class="btn btn-primary">Cancel</button>
-               
-               
-
+                </div>
+                <div class="time__container">
+                    <div class="time">
+                        Kivánja folytatni? 
+                    </div>
+                    <button id="VideoContinues" class="btn btn-primary">Save</button>
+                    <button id="videoCancel" class="btn btn-primary">Cancel</button>
                 </div>
                 <div class="controller">
                     <div class="timeline">

@@ -270,6 +270,7 @@ section .movie__item__content{
 }
 
 .movie__item .movie__item__title{
+    white-space: nowrap;
     font-family: var(--font-family-raleway);
 }
 .owl-carousel .owl-item img{
