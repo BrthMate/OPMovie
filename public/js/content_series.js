@@ -372,7 +372,7 @@ function subTitleSettings(){
 
 function saveSettings(){
   $(':root').css('--color',document.querySelector("#fontColor").value);
-  $(':root').css('--fontsize',document.querySelector("#fontSize").value +"px");
+  document.querySelector("#fontSize").value != "" ? $(':root').css('--fontsize',document.querySelector("#fontSize").value +"px") : "";
   $(':root').css('--background',document.querySelector("#bgColor").value);
   subSettingsbox.style.display = "none";
 }
