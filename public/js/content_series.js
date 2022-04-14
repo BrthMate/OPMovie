@@ -196,9 +196,9 @@ video.addEventListener('timeupdate', () => {
 });
 
 bar.addEventListener('click', (event) => {
-  const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft) - (window.screen.width-video.offsetWidth)/2 ) / bar.offsetWidth;
+  const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft)-(document.querySelector("body").offsetWidth-video.offsetWidth)/2 ) / bar.offsetWidth;
   //const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft)) / bar.offsetWidth;
-  video.currentTime = pos * video.duration;
+  video.currentTime = pos * video.duration;//
 });
 /*cogBtn.addEventListener("click", () => {
   cogBoxDP();
