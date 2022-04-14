@@ -26,7 +26,7 @@ const cancel = document.querySelector("#cancel");
 
 let controlsTimeout;
 let Currentsub;
-let lineControll = -4;
+let lineControll = -5;
 
 watchedBar.style.width = '0px';
 pauseBtn.style.display = 'none';
@@ -196,7 +196,8 @@ video.addEventListener('timeupdate', () => {
 });
 
 bar.addEventListener('click', (event) => {
-  const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft)) / bar.offsetWidth;
+  const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft) - (window.screen.width-video.offsetWidth)/2 ) / bar.offsetWidth;
+  //const pos = (event.pageX  - (bar.offsetLeft + bar.offsetParent.offsetLeft)) / bar.offsetWidth;
   video.currentTime = pos * video.duration;
 });
 /*cogBtn.addEventListener("click", () => {
