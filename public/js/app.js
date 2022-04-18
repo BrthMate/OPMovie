@@ -174,11 +174,11 @@ function BackTopmousedown(e){
             BackTop.style.top = window.innerHeight-BackTop.offsetHeight - 10 + "px"; 
         }
         else{
-            if(rect.top - newY > 10){
+            /*if(rect.top - newY > 10){
                 BackTop.style.top = rect.top - newY + "px";
             }else{
                 BackTop.style.top = 10 + "px";
-            }
+            }*/
             if(rect.left - newX > 10){
                 BackTop.style.left = rect.left - newX + "px";
             }else{

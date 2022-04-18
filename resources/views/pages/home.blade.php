@@ -31,7 +31,7 @@
                                 <div class="movie__info">
                                     <span>HD</span>
                                 </div>
-                                <div class="movie__info">
+                                <div class="movie__info time">
                                     <span>16+</span>
                                 </div>
                             </div>
@@ -43,7 +43,11 @@
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>Watch now</span>
                                 </a>
-                            </div>
+                                <a href="#" class="btn outline btn__hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch trailer</span>
+                                </a>
+                            </div>                           
                         </div>
                     </div>
                 </div>
@@ -66,11 +70,11 @@
                                 <div class="movie__info">
                                     <span>HD</span>
                                 </div>
-                                <div class="movie__info">
+                                <div class="movie__info time">
                                     <span>16+</span>
                                 </div>
                             </div>
-                            <div class="item__content-description top__down delay-4">
+                            <div class="item__content__description top__down delay-4">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
                             </div>
                             <div class="top__down delay-6">
@@ -78,7 +82,11 @@
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>Watch now</span>
                                 </a>
-                            </div>
+                                <a href="#" class="btn outline btn__hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch trailer</span>
+                                </a>
+                            </div>                           
                         </div>
                     </div>
                 </div>
@@ -101,11 +109,11 @@
                                 <div class="movie__info">
                                     <span>HD</span>
                                 </div>
-                                <div class="movie__info">
+                                <div class="movie__info time">
                                     <span>16+</span>
                                 </div>
                             </div>
-                            <div class="item__content-description top__down delay-4">
+                            <div class="item__content__description top__down delay-4">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
                             </div>
                             <div class="top__down delay-6">
@@ -113,7 +121,11 @@
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>Watch now</span>
                                 </a>
-                            </div>
+                                <a href="#" class="btn outline btn__hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch trailer</span>
+                                </a>
+                            </div>                           
                         </div>
                     </div>
                 </div>

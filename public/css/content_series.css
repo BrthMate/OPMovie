@@ -4,19 +4,28 @@
     margin-bottom: 50px;
 }
 .card{
-    overflow: hidden;
     padding: 0;
     border-radius: 20px;
     border: none;
     margin: 10px;
     background: unset;
+    border-radius: 25px;
+    width: 13rem;
 }
+
 .card img{
     border-radius: 25px;
+    -webkit-box-shadow: 0px 8px 15px 5px rgb(0 0 0 / 49%);
+    box-shadow: 0px 8px 15px 5px rgb(0 0 0 / 49%);
+    height: 18rem;
 }
+
+.card:hover{overflow: hidden;}
+
 .card:hover img{
-    transform: scale(1.6);
+    transform: scale(1.6) translateY(35px);
 }
+
 .card-body{
     height: 64px;
 }
@@ -51,8 +60,9 @@
     width: 15rem;
 }
 .series__desc{
-    width: calc( 100% - 15rem);
+    width: calc( 100% - 20rem);
     padding: 10px;
+    margin: auto;
 }
 .title{
     font-size: 1.5rem;
@@ -93,10 +103,10 @@ video{
     justify-content: center;
 }
 .movie__item{
-    padding-top: 120%;
+    padding-top: 170%;
 }
 .movie__item:hover img {
-    transform: scale(1.6) translateY(30px);
+    transform: scale(1.6) translateY(35px);
     height: 100%;
 }
 
@@ -179,7 +189,7 @@ video{
     bottom: 60px;
     font-size: 1.2rem;
     background: var(--blue);
-    padding: 0px 15px;
+    padding: 5px 15px;
     border-radius: 10px;
     color: white;
     display: none;
@@ -276,8 +286,14 @@ input[type=number] {
 }
 .time{
     margin: 10px;
+    background: unset;
+    color: var(--light);
 }
-@media screen and (max-width: 600px) {
+
+.btn{
+    color:white;
+}
+@media screen and (max-width: 800px) {
     .row{
         flex-direction: column;
     }
@@ -288,6 +304,7 @@ input[type=number] {
         width: 90%;
         padding: 10px;
         margin: auto;
+        margin-top: 5rem;
     }
     .video__title{
         display: none;

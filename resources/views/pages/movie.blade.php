@@ -37,7 +37,7 @@
         <div class="row">
             <div class="card" style="width: 13rem;">
                 <a class="over__lay"></a>
-                <img class="card-img-top" src="../imgs/series/supergirl.jpg" alt="Card image cap">
+                <img class="card-img-top" src="../imgs/series/mandalorian.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                 </div>

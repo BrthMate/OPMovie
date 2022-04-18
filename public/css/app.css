@@ -122,6 +122,7 @@ li.active a{
     background: var(--blue);
     margin: 5px 10px;
     border-color: var(--blue);
+    color: var(--light);
 }
 
 .full{

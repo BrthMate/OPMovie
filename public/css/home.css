@@ -90,11 +90,29 @@ body{
     align-items: center;
     font-size: 0.8rem;
     font-weight: 600;
+    margin: 0 5px;
 }
 
+.btn.outline{
+    color: var(--light);
+    border-color: var(--light);
+    background: unset;
+}
+.btn.outline:hover{
+    background: unset;
+}
 .movie__info span {
     margin-left: 5px;
 }
+
+.time{
+    background: var(--blue);
+    padding: 2px;
+    margin: 0 3px;
+    border-radius: 5px;
+    color: white;
+}
+
 .movie__info ~ .movie__info {
     margin-left: 5px;
 }
@@ -102,7 +120,7 @@ body{
 .item__content__description {
     font-size: 1.15rem;
     line-height: 1.5rem;
-    max-width: 70%;
+    width: 70%;
     overflow: hidden;
 }
 
@@ -203,7 +221,7 @@ body{
 }
 
 .movie__item:hover img {
-    transform: scale(1.4);
+    transform: scale(1.4) translateY(35px);
 }
 .link{
     display: none;
