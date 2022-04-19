@@ -380,7 +380,7 @@
     </section>
     <section class="best__rating">
         <h2>
-            Best
+            Best ratings
         </h2>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <div class="movie__item">

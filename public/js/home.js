@@ -11,7 +11,7 @@ $(document).ready(() => {
     })
 
     $('#top-movies-slide').owlCarousel({
-        items: 2,
+        items: 3,
         dots: false,
         loop: true,
         margin: 15,
@@ -22,10 +22,10 @@ $(document).ready(() => {
                 items:1
             },
             400: {
-                items: 2
+                items: 3
             },
             1280: {
-                items: 4
+                items: 5
             },
             1600: {
                 items: 6
@@ -45,10 +45,10 @@ $(document).ready(() => {
                 items:1
             },
             400: {
-                items: 2
+                items: 3
             },
             1280: {
-                items: 4
+                items: 5
             },
             1600: {
                 items: 6

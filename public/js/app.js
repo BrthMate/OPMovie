@@ -120,11 +120,11 @@ document.addEventListener('scroll', function(e) {
 });
 
 let backToUp = 0;
-
-document.addEventListener('scroll', function(e) {
+let back__toBtnPos = height*.7;
+document.addEventListener('scroll', function() {
     if(window.scrollY < backToUp){
         BackTop.style.display = "block";
-        BackTop.style.top = height*0.7+scrollY+"px";
+        BackTop.style.top = back__toBtnPos + scrollY+"px";
     }
     else{
         BackTop.style.display = "none";
@@ -167,6 +167,7 @@ function BackTopmousedown(e){
         let newY = prevY-e.clientY;
 
         const rect = BackTop.getBoundingClientRect();
+        back__toBtnPos = rect.top;
         if(window.innerWidth-(rect.left - newX)-BackTop.offsetWidth < 10 ){
             BackTop.style.left = window.innerWidth-BackTop.offsetWidth - 10 + "px";          
         }
@@ -174,11 +175,12 @@ function BackTopmousedown(e){
             BackTop.style.top = window.innerHeight-BackTop.offsetHeight - 10 + "px"; 
         }
         else{
-            /*if(rect.top - newY > 10){
-                BackTop.style.top = rect.top - newY + "px";
+            if(rect.top - newY > 10){
+                BackTop.style.top = window.scrollY+rect.top - newY + "px";
+                
             }else{
                 BackTop.style.top = 10 + "px";
-            }*/
+            }
             if(rect.left - newX > 10){
                 BackTop.style.left = rect.left - newX + "px";
             }else{

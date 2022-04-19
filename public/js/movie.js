@@ -11,3 +11,10 @@ $('.dropdown .dropdown-menu li').click(function () {
     $(this).parents('.dropdown').find('span').text($(this).text());
     $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
 });
+
+document.addEventListener("scroll", () =>{
+    if(window.scrollY+window.screen.height == document.documentElement.scrollHeight){
+        // sroll to bottom
+    }
+})
+
