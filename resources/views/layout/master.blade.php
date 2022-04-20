@@ -21,7 +21,7 @@
           </div>
           <div class="cog__items">
             <span class="mode">
-              light-theme
+              change-theme
             </span>
           </div>
         </div>

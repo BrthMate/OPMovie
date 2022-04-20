@@ -29,6 +29,7 @@ body{
     color: var(--light);
     font-family: var(--font-family-lato);
     overflow-x: hidden ;
+    transition: 1s;
 }
 
 .navigation{

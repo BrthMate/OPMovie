@@ -132,373 +132,752 @@
             </div>
         </div>
     </div>
-    <section class="best__rating">
-        <h2>
-            Latest
-        </h2>
-        <div class="top-movies-slide">
-            <div class="owl-carousel" id="top-movies-slide">
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
-                        </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/movies/captain-marvel.png" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Captain Marvel
-                        </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/cartoons/demon-slayer.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Infinity Train
-                        </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/movies/blood-shot.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Bloodshot
-                        </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/wanda.png" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Wanda Vision
-                        </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/movies/bat-man.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            The Dark Knight
-                        </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div class="which__one">
+        <div class="which__one__container">
+            <span class="movies active">Movies</span>
+            <span class="series">Series</span>
         </div>
-    </section>
-    <section class="best__rating">
-        <h2>
-            Most Viewed
-        </h2>
-            <div class="movies-slide carousel-nav-center owl-carousel">
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+    </div>
+    <div class="movies__container">
+        <section class="best__rating">
+            <h2>
+                Latest Moives
+            </h2>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                
+                    
+        </section>
+        <section class="best__rating">
+            <h2>
+                Most Viewed Movies
+            </h2>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                
+                    
+        </section>
+        <section class="best__rating">
+            <h2>
+                Best Rated Movies
+            </h2>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+        </section>
+    </div>
+
+    <div class="series__container d-none">
+        <section class="best__rating">
+            <h2>
+                Latest Series
+            </h2>
+            <div class="top-movies-slide">
+                <div class="owl-carousel" id="top-movies-slide">
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/movies/captain-marvel.png" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Captain Marvel
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/cartoons/demon-slayer.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Infinity Train
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/movies/blood-shot.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Bloodshot
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/wanda.png" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Wanda Vision
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/movies/bat-man.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                The Dark Knight
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+        </section>
+        <section class="best__rating">
+            <h2>
+                Most Viewed Series
+            </h2>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-    </section>
-    <section class="best__rating">
-        <h2>
-            Best ratings
-        </h2>
-            <div class="movies-slide carousel-nav-center owl-carousel">
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    
+        </section>
+        <section class="best__rating">
+            <h2>
+                Best Rated Series
+            </h2>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="movie__item">
-                    <div class="movie__info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <a class="link" href="#"></a>
-                    <div class="card__overlay"></div>
-                    <img src="../imgs/series/supergirl.jpg" alt="">
-                    <div class="movie__item__content">
-                        <div class="movie__item__title">
-                            Supergirl
+                    <div class="movie__item">
+                        <div class="movie__info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
                         </div>
-                        <div class="movie__infos">
-                            <div class="movie__apearance">
-                                2021-01-12
+                        <a class="link" href="#"></a>
+                        <div class="card__overlay"></div>
+                        <img src="../imgs/series/supergirl.jpg" alt="">
+                        <div class="movie__item__content">
+                            <div class="movie__item__title">
+                                Supergirl
+                            </div>
+                            <div class="movie__infos">
+                                <div class="movie__apearance">
+                                    2021-01-12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>                
-    </section>
+                </div>                
+        </section>
+    </div>
     @endsection
 
 @section("script")

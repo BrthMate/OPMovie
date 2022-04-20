@@ -179,7 +179,7 @@ function BackTopmousedown(e){
                 BackTop.style.top = window.scrollY+rect.top - newY + "px";
                 
             }else{
-                BackTop.style.top = 10 + "px";
+                BackTop.style.top = window.scrollY+10 + "px";
             }
             if(rect.left - newX > 10){
                 BackTop.style.left = rect.left - newX + "px";

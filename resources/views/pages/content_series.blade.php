@@ -32,6 +32,10 @@
                 <p>Aktív</p>
                 <div class="episode">Epizódok száma:</div>
                 <p>45</p>
+                <div class="rate">Értékelés:</div>
+                <p><i class="bx bxs-star"></i> 4.5 (2500 szavazat)</p>
+                <div class="rate">Megtekintés:</div>
+                <p>4000</p>
 
             </div>
             <div class="contect__with">

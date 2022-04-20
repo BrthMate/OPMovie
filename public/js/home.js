@@ -4,8 +4,8 @@ $(document).ready(() => {
 
     $('#carousel').owlCarousel({
         items: 1,
-        dots: false,
         loop: true,
+        dots: true,
         autoplay: true,
         autoplayHoverPause: true,
     })
@@ -24,6 +24,9 @@ $(document).ready(() => {
             400: {
                 items: 3
             },
+            900: {
+                items: 4
+            },
             1280: {
                 items: 5
             },
@@ -32,10 +35,10 @@ $(document).ready(() => {
             }
         }
     })
-
     $('.movies-slide').owlCarousel({
         items: 2,
         loop: true,
+        dots: false,
         margin: 15,
         autoplay: true,
         autoplayHoverPause: true,
@@ -47,6 +50,9 @@ $(document).ready(() => {
             400: {
                 items: 3
             },
+            900: {
+                items: 4
+            },
             1280: {
                 items: 5
             },
@@ -55,4 +61,33 @@ $(document).ready(() => {
             }
         }
     })
-})
+});
+
+if(url === "/"){
+    const series = document.querySelector(".series");
+    const movies = document.querySelector(".movies");
+    const seriesContainer = document.querySelector(".series__container");
+    const moviesContainer = document.querySelector(".movies__container");
+
+    series.addEventListener("click",() => {
+        seriesFunc();
+    });
+
+    movies.addEventListener("click",() => {
+        moviesFunc();
+    });
+
+    function seriesFunc(){
+        movies.classList.remove("active");
+        series.classList.add("active");
+        moviesContainer.classList.add("d-none");
+        seriesContainer.classList.remove("d-none");
+    }
+
+    function moviesFunc(){
+        series.classList.remove("active");
+        movies.classList.add("active");
+        seriesContainer.classList.add("d-none");
+        moviesContainer.classList.remove("d-none");
+    }
+}
