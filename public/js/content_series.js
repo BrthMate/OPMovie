@@ -407,4 +407,25 @@ const formatTime = (time) =>{
 
   return (`${currentTimehours ? currentTimehours : '00'}:${currentTimeminutes}:${currentTimeseconds}`);
 } 
+let rating;
+const starts = document.querySelectorAll( ".rating__container i");
 
+starts.forEach((element,index) => {
+    element.addEventListener("click", () =>{
+      startsCheck(index);
+    })
+});
+
+function startsCheck(starIndex){
+  starts.forEach((element,index) => {
+    rating = index;
+    if(index <= starIndex){
+      element.classList.add("bxs-star")
+      element.classList.remove("bx-star")
+  
+    }else{
+      element.classList.remove("bxs-star")
+      element.classList.add("bx-star")
+    }
+  });
+}

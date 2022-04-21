@@ -149,22 +149,27 @@ searchInput.addEventListener('keyup', () => {
 
 /***back__to */
 
-BackTop.addEventListener("mousedown", BackTopmousedown);
+BackTop.addEventListener("dragstart", BackTopmousedown);
 
 function BackTopmousedown(e){
-
-    window.addEventListener('mousemove',mousemove);
-    window.addEventListener('mouseup',mouseup);
+    console.log("start")
+    window.addEventListener('drag',mousemove);
+    window.addEventListener('dragend',mouseup);
 
     let prevX = e.clientX;
     let prevY = e.clientY;
 
     function mousemove(e){
-
         BackTop.style.right= "unset";
 
-        let newX = prevX-e.clientX;
-        let newY = prevY-e.clientY;
+        let newX; 
+        let newY; 
+
+        if(e.clientX != 0 || e.clientY != 0){
+            newX = prevX-e.clientX;
+            newY = prevY-e.clientY;
+        }
+        
 
         const rect = BackTop.getBoundingClientRect();
         back__toBtnPos = rect.top;
@@ -179,21 +184,23 @@ function BackTopmousedown(e){
                 BackTop.style.top = window.scrollY+rect.top - newY + "px";
                 
             }else{
-                BackTop.style.top = window.scrollY+10 + "px";
+                //BackTop.style.top = window.scrollY+10 + "px";
             }
             if(rect.left - newX > 10){
                 BackTop.style.left = rect.left - newX + "px";
             }else{
-                BackTop.style.left = 10 + "px";
+                //BackTop.style.left = 10 + "px";
             }
         }
-        prevX = e.clientX;
-        prevY = e.clientY;
-    
+        if(e.clientX !== 0 && e.clientY !== 0){
+            prevX = e.clientX;
+            prevY = e.clientY;
+        }
     }
 
     function mouseup(){
-        window.removeEventListener('mousemove',mousemove);
-        window.removeEventListener('mouseup', mouseup);
+        console.log("end")
+        window.removeEventListener('drag',mousemove);
+        window.removeEventListener('dragend', mouseup);
     }
 }

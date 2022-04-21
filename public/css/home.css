@@ -337,6 +337,13 @@ section .movie__item__content{
     border-bottom: 2px solid var(--blue);
     transition: 0.5s;
 }
+.owl-item.active.drag {
+    transform: scale(0.8);
+    transition: 1s ease-in-out;
+}
+.owl-carousel.owl-drag .owl-item{
+    transition: 1s;
+}
 @media screen and (max-width: 450px) {
     .item__content__wraper{
         width:100%;

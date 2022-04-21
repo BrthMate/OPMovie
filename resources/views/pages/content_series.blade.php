@@ -33,6 +33,19 @@
                 <div class="episode">Epizódok száma:</div>
                 <p>45</p>
                 <div class="rate">Értékelés:</div>
+                <div class="rating__container">
+                    <span>Értékelj: </span>
+                    <label for="rate-5"><i class='bx bx-star'></i></label>
+                    <input type="radio" name=rate id="rate-5">
+                    <label for="rate-4"><i class='bx bx-star'></i></label>
+                    <input type="radio" name=rate id="rate-4">
+                    <label for="rate-3"><i class='bx bx-star'></i></label>
+                    <input type="radio" name=rate id="rate-3">
+                    <label for="rate-2"><i class='bx bx-star'></i></label>
+                    <input type="radio" name=rate id="rate-2">
+                    <label for="rate-1"><i class='bx bx-star'></i></label>
+                    <input type="radio" name=rate id="rate-1">
+                </div>
                 <p><i class="bx bxs-star"></i> 4.5 (2500 szavazat)</p>
                 <div class="rate">Megtekintés:</div>
                 <p>4000</p>

@@ -6,6 +6,8 @@ $(document).ready(() => {
         items: 1,
         loop: true,
         dots: true,
+        onDrag: addDrag,
+        onDragged: removeDrag,
         autoplay: true,
         autoplayHoverPause: true,
     })
@@ -69,6 +71,7 @@ if(url === "/"){
     const seriesContainer = document.querySelector(".series__container");
     const moviesContainer = document.querySelector(".movies__container");
 
+
     series.addEventListener("click",() => {
         seriesFunc();
     });
@@ -90,4 +93,13 @@ if(url === "/"){
         seriesContainer.classList.add("d-none");
         moviesContainer.classList.remove("d-none");
     }
+}
+
+function addDrag(){
+    const carousel = document.querySelector(".owl-item.active")
+    carousel.classList.add("drag")
+}
+function removeDrag(){
+    const carousel = document.querySelector(".owl-item.drag")
+    carousel.classList.remove("drag")
 }

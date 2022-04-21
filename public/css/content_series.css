@@ -214,7 +214,6 @@ video{
 .speed,.sub__title{
     display: flex;
     align-items: center;
-    padding: 5px;
     justify-content: flex-start;
 }
 .cog__container span{ 
@@ -291,6 +290,18 @@ input[type=number] {
 }
 .btn{
     color:white;
+}
+.rating__container{
+    margin: 10px 0;
+}
+.rating__container span{
+    font-family: var(--font-family-lato);
+}
+.rating__container input {
+    display: none;
+}
+.rating__container i.bxs-star{
+    color: var(--blue)
 }
 @media screen and (max-width: 800px) {
     .row{
