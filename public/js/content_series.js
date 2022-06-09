@@ -129,8 +129,37 @@ exitBtn.addEventListener('click',() => {
 video.addEventListener('click', () => {
   playPause();
 });
-video.addEventListener('contextmenu',  () => { 
+video.addEventListener('dblclick',  () => { 
   mouse_position();
+});
+
+/**Mouse Hold */
+var setint  = '';
+video.addEventListener('mousedown',  (e) => {
+  pos = e.clientX; 
+  clearInterval(setint);
+  setint = setInterval(function () {
+      mouse_positionVar(pos);
+  },50);
+});
+
+$('#video').on("mouseleave mouseup", function () {
+   clearInterval(setint);
+});
+
+/**Touch Hold */
+
+var setint  = '';
+video.addEventListener('touchstart',  (e) => {
+  pos = e.touches[0].clientX; 
+  clearInterval(setint);
+  setint = setInterval(function () {
+      mouse_positionVar(pos);
+  },50);
+});
+
+$('#video').on("touchcancel touchend", function () {
+   clearInterval(setint);
 });
 video.addEventListener('mousewheel',  (e) => { 
   if(exitBtn.style.display != 'none'){
@@ -276,6 +305,16 @@ const mouse_position = () => {
   var e = window.event;
   var posX = e.clientX;
   var posY = e.clientY;
+
+  if( window.innerWidth/2 > posX){
+    video.currentTime -= 10;
+  }
+  else{
+    video.currentTime +=10;
+  }
+}
+
+const mouse_positionVar = (posX) => {
 
   if( window.innerWidth/2 > posX){
     video.currentTime -= 10;
